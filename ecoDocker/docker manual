@@ -1,0 +1,83 @@
+kitematic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+
+sudo apt-get install virtualbox
+ apt-cache policy docker-engine
+
+ sudo usermod -aG docker $(whoami)
+
+sudo apt install docker-compose
+
+####
+docker-machine create MACHINE_NAME
+docker-machine env zendphp
+eval $(docker-machine env zendphp)
+
+ git clone https://github.com/janatzend/docker-zendserver-nginx-php5.5.git
+docker build -t zend-server:8.0-php5.5-nginx .
+sudo docker run -it -p 88:80 -p 10088:10081 -v /home/malgrat/kremenetskaya/www/site1/public_html:/var/www/html zend-server:8.0-php5.5-nginx
+
+
+docker ps
+docker exec -it 93bb891c758a bash
+
+
+
+##########
+docker-machine scp [-r] ./docker-stack.yml manager:/home/docker/docker-stack.yml
+docker node ls
+eval $(docker-machine env manager)
+
+
+docker-compose up -d
+docker-machine create pentaCode
+docker-machine ssh pentaCode
+##############
+docker cp zend-loader-php5.5-linux-x86_64_update1.tar.gz 93bb891c758a:/tmp/zend5.5.tar.gz
+
+docker-machine ssh manager
+
+docker-machine ip manager
+
+1. docker-machine
+2. env docker-machine (docker-machine scp WHAT MACHINE:WHERE)
+3. env MACHINE - docker-compose up [-d]
+
+
+###############
+после изменений коммиты
+
+docker commit -m "Message" -a "Alexey Gaynulin" #container-id# malgrat/ecodocker/IMAGENAME
+
+ docker commit -m "From ubuntu_base. Nginx-light ENV. With composer supervisor phalcone php7" -a "Alexey Gaynulin" 6de25945da31 malgrat/nginx_base
+
+
+docker stack deploy --compose-file docker-compose.yml  ECO
+docker stack rm ECO
+docker stack services ECO
+
+
+docker-compose up -d
+docker-compose kill
+
+
+
+

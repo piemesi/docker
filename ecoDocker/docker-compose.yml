@@ -1,0 +1,72 @@
+nginx:
+#   image: tutum/nginx
+    image: tutum/nginx # malgrat/nginx_base:latest # tutum/nginx # 
+    container_name: nginx
+    ports:
+     - "8088:80"
+#     - "443:443"
+    links:
+     - phpfpm
+     - rabbitmq:rabbitmq
+     - mysql:mysql
+     - memcached:memcached
+    volumes:
+     - ./nginx/default:/etc/nginx/sites-available/default
+     - ./nginx/default:/etc/nginx/sites-enabled/default
+     - /var/www/ecogate-tools:/var/www/ecogate-tools
+      #  - ./logs/nginx-error.log:/var/log/nginx/error.log
+      #  - ./logs/nginx-access.log:/var/log/nginx/access.log
+phpfpm:
+    image: php:fpm
+    container_name: phpfpm
+#    links:
+#        - nginx
+    ports:
+        - "9000:9000"
+    volumes:
+        - /var/www/ecogate-tools:/var/www/ecogate-tools
+mysql:
+  image: percona/percona-server:latest
+  container_name: mysql_percona
+  environment:
+    MYSQL_ROOT_PASSWORD: 123456
+  ports:
+    - "3307:3306"
+  volumes:
+    # create volumes for use
+    - /var/lib/mysql
+    # bind mount my local my.cnf
+    # - $PWD/my.cnf:/etc/my.cnf
+  command:
+    # Workaround for no my.cnf in image
+    #  - '--user=mysql'
+    - '--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
+#mysql:
+#  image: mariadb
+#  environment:
+#    MYSQL_ROOT_PASSWORD: admin
+#  ports:
+#    - "5306:3306" 
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  container_name: mysql_pma
+  restart: always
+  links:
+    - mysql
+  ports:
+    - 8183:80
+  environment:
+    PMA_USER: root
+    PMA_PASSWORD: 123456
+    PMA_ARBITRARY: 1
+rabbitmq:
+  image: rabbitmq:3.6.1-management
+  container_name: rabbitmq
+  ports:
+    - "15673:15672"
+    - "5673:5672"
+memcached:
+  image: memcached
+  container_name: memcached
+  ports:
+    - "11212:11211"

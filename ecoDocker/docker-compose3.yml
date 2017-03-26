@@ -1,0 +1,73 @@
+version: "3"
+services:
+
+  nginx:
+    image: tutum/nginx 
+    ports:
+    - "8088:80"
+    networks:
+    - tools
+    - gate
+    depends_on:
+    - phpfpm
+    volumes:
+    - ./nginx/default:/etc/nginx/sites-available/default
+    - ./nginx/default:/etc/nginx/sites-enabled/default
+#  - ./logs/nginx-error.log:/var/log/nginx/error.log
+#  - ./logs/nginx-access.log:/var/log/nginx/access.log
+  phpfpm:
+    image: php:fpm
+    networks:
+    - tools
+    - gate
+    ports:
+    - "9000:9000"
+    volumes:
+    - ./public:/var/www/ecogate-tools/htdocs
+    - ./public:/var/www/ecogate.proto/pmx-nt
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+    - "5306:3306"
+    networks:
+    - tools
+    - gate
+    deploy:
+     replicas: 2
+     update_config:
+       parallelism: 2
+     restart_policy:
+       condition: on-failure
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    depends_on:
+    - mysql
+    networks:
+    - tools
+    - gate
+    ports:
+    - 8183:80
+    environment:
+      PMA_USER: root
+      PMA_PASSWORD: admin
+      PMA_ARBITRARY: 1
+    deploy:
+     replicas: 2
+     update_config:
+       parallelism: 2
+     restart_policy:
+       condition: on-failure
+#    deploy:
+#      placement:
+#        constraints: [node.role == ecogate]
+
+networks:
+  tools:
+  gate:
+
+#volumes:
+#  /home/docker/ecoDocker/nginx/default:
+#  /home/docker/ecoDocker/public:
