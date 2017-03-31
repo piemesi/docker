@@ -1,0 +1,108 @@
+2017/03/31 15:12:08 [error] 8#0: *8 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_connect(): unable to connect [111]: Connection refused in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 15
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_connect() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:15
+PHP message: PHP Warning:  socket_send(): unable to write to socket [32]: Broken pipe in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 16
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_send() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:16" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:12:08 [error] 8#0: *8 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [107]: Transport endpoint is not connected in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:12:10 [error] 8#0: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_connect(): unable to connect [111]: Connection refused in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 15
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_connect() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:15
+PHP message: PHP Warning:  socket_send(): unable to write to socket [32]: Broken pipe in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 16
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_send() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:16" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:12:10 [error] 8#0: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [107]: Transport endpoint is not connected in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:13:27 [error] 8#0: *6 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:53:33 [error] 6#0: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_connect(): unable to connect [111]: Connection refused in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 15
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_connect() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:15
+PHP message: PHP Warning:  socket_send(): unable to write to socket [32]: Broken pipe in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 16
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_send() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:16" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 15:53:33 [error] 6#0: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [107]: Transport endpoint is not connected in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:01:44 [error] 6#0: *25 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:02:33 [error] 7#0: *8 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:02:38 [error] 7#0: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:02:39 [error] 7#0: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:02:42 [error] 7#0: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:02:56 [error] 7#0: *7 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:03:23 [error] 7#0: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/31 16:03:24 [error] 7#0: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [104]: Connection reset by peer in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=172.17.0.1:12181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"

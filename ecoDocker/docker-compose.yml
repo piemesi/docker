@@ -1,30 +1,70 @@
 nginx:
-#   image: tutum/nginx
-    image: tutum/nginx # malgrat/nginx_base:latest # tutum/nginx # 
+    image:  malgrat/nginx_proto:kafka #malgrat/nginx_base:tutumubuntu_phalcon 
     container_name: nginx
     ports:
-     - "8088:80"
-#     - "443:443"
+     - "8889:80"
+     - "12180-12183:2180-2183"
+     - "19090-19094:9090-9094"
+#     - "43000-45500:43000-45500"
+    links:
+     - phpfpm
+     - rabbitmq:rabbitmq
+     - mysql:mysql
+     - memcached:memcached
+    extra_hosts:
+     - "gate.docker:localhost"
+    volumes:
+     - ./nginx_gate/gate.docker:/etc/nginx/sites-available/gate.docker
+     - ./nginx_gate/gate.docker:/etc/nginx/sites-enabled/gate.docker
+#     - ./nginx/sites-available:/etc/nginx/sites-available
+     - ./nginx_gate/default:/etc/nginx/sites-available/default
+     - ./nginx_gate/default:/etc/nginx/sites-enabled/default
+     - /var/www/ecogate-proto:/var/www/ecogate-proto
+     - ./nginx_gate/nginx-error.log:/var/log/nginx/error.log
+     - ./nginx_gate/nginx-access.log:/var/log/nginx/access.log
+     - ./nginx_tools/lbash.sh:/lbash.sh
+    entrypoint:
+#     - 'pwd'
+     - "/bin/bash"
+     - "lbash.sh"
+#      - "/usr/sbin/nginx"
+#     - 'cd /opt/kafka-cluster'
+ #    - ./start_local.sh
+nginx_tools:
+    image:  malgrat/nginx_base:tutumubuntu_phalcon # malgrat/nginx_base #tutumubuntu_proto #malgrat/nginx_tools #malgrat/nginx_base #:tutumubuntu_proto 
+#    build: ./nginx_tools 
+    container_name: nginx_tools
+    ports:
+     - "8888:80"
+#     - "12180-12183:2180-2183"
+#     - "19090-19094:9090-9094"
     links:
      - phpfpm
      - rabbitmq:rabbitmq
      - mysql:mysql
      - memcached:memcached
     volumes:
-     - ./nginx/default:/etc/nginx/sites-available/default
-     - ./nginx/default:/etc/nginx/sites-enabled/default
+     - ./nginx_tools/tools.docker:/etc/nginx/sites-available/tools.docker
+     - ./nginx_tools/tools.docker:/etc/nginx/sites-enabled/tools.docker
+     - ./nginx/sites-available:/etc/nginx/sites-available
+     - ./nginx_tools/default:/etc/nginx/sites-available/default
+     - ./nginx_tools/default:/etc/nginx/sites-enabled/default
      - /var/www/ecogate-tools:/var/www/ecogate-tools
-      #  - ./logs/nginx-error.log:/var/log/nginx/error.log
-      #  - ./logs/nginx-access.log:/var/log/nginx/access.log
+     - ./nginx_tools/local.php:/var/www/ecogate-tools/config/local.php
+     - ./logs/nginx-error.log:/var/log/nginx/error.log
+     - ./logs/nginx-access.log:/var/log/nginx/access.log
 phpfpm:
-    image: php:fpm
+    image: malgrat/phpfpm:rdkafka_composer # malgrat/phpfpm:rdkafka   # majksner/php-fpm # php:fpm
     container_name: phpfpm
-#    links:
-#        - nginx
+    extra_hosts:
+#     - "tools.docker:172.17.0.1"
+     - "localhost:172.17.0.1"
+#     - "gate.docker:172.17.0.1" 
     ports:
         - "9000:9000"
     volumes:
         - /var/www/ecogate-tools:/var/www/ecogate-tools
+        - /var/www/ecogate-proto:/var/www/ecogate-proto
 mysql:
   image: percona/percona-server:latest
   container_name: mysql_percona
@@ -41,12 +81,6 @@ mysql:
     # Workaround for no my.cnf in image
     #  - '--user=mysql'
     - '--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci'
-#mysql:
-#  image: mariadb
-#  environment:
-#    MYSQL_ROOT_PASSWORD: admin
-#  ports:
-#    - "5306:3306" 
 phpmyadmin:
   image: phpmyadmin/phpmyadmin
   container_name: mysql_pma
@@ -70,3 +104,8 @@ memcached:
   container_name: memcached
   ports:
     - "11212:11211"
+#kafka: 
+#  image: malgrat/kafka-cluster
+#  container_name: kafka
+#  links:
+#    - nginx

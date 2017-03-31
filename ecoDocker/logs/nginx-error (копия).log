@@ -1,0 +1,39 @@
+2017/03/30 07:19:27 [error] 7#0: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_connect(): unable to connect [111]: Connection refused in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 15
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_connect() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:15
+PHP message: PHP Warning:  socket_send(): unable to write to socket [32]: Broken pipe in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 16
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_send() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:16" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=127.0.0.1:2181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/30 07:19:27 [error] 7#0: *9 FastCGI sent in stderr: "PHP message: PHP Warning:  socket_read(): unable to read from socket [107]: Transport endpoint is not connected in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 17
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/ecogate-tools/htdocs/ajax.php:0
+PHP message: PHP   2. Tools\Monitoring\Controller->getSingleMonitor() /var/www/ecogate-tools/htdocs/ajax.php:47
+PHP message: PHP   3. Tools\Monitoring\SimpleCheck->zookeeper() /var/www/ecogate-tools/src/Monitoring/Controller.php:84
+PHP message: PHP   4. socket_read() /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:17" while reading upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=zookeeper&url=127.0.0.1:2181 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/30 07:19:27 [error] 7#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'RdKafka\Conf' not found in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:96
+Stack trace:
+#0 /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php(70): Tools\Monitoring\SimpleCheck->getKafkaMetadata('127.0.0.1:9092')
+#1 /var/www/ecogate-tools/src/Monitoring/Controller.php(81): Tools\Monitoring\SimpleCheck->kafka('127.0.0.1:9092')
+#2 /var/www/ecogate-tools/htdocs/ajax.php(47): Tools\Monitoring\Controller->getSingleMonitor('kafka', '127.0.0.1:9092')
+#3 {main}
+  thrown in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 96" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=kafka&url=127.0.0.1:9092 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/30 07:19:27 [error] 7#0: *12 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'RdKafka\Conf' not found in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:96
+Stack trace:
+#0 /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php(70): Tools\Monitoring\SimpleCheck->getKafkaMetadata('127.0.0.1:9093')
+#1 /var/www/ecogate-tools/src/Monitoring/Controller.php(81): Tools\Monitoring\SimpleCheck->kafka('127.0.0.1:9093')
+#2 /var/www/ecogate-tools/htdocs/ajax.php(47): Tools\Monitoring\Controller->getSingleMonitor('kafka', '127.0.0.1:9093')
+#3 {main}
+  thrown in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 96" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=kafka&url=127.0.0.1:9093 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/03/30 07:19:27 [error] 7#0: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'RdKafka\Conf' not found in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php:96
+Stack trace:
+#0 /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php(70): Tools\Monitoring\SimpleCheck->getKafkaMetadata('127.0.0.1:9094')
+#1 /var/www/ecogate-tools/src/Monitoring/Controller.php(81): Tools\Monitoring\SimpleCheck->kafka('127.0.0.1:9094')
+#2 /var/www/ecogate-tools/htdocs/ajax.php(47): Tools\Monitoring\Controller->getSingleMonitor('kafka', '127.0.0.1:9094')
+#3 {main}
+  thrown in /var/www/ecogate-tools/src/Monitoring/SimpleCheck.php on line 96" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET //ajax.php?action=single_monitor&type=kafka&url=127.0.0.1:9094 HTTP/1.1", upstream: "fastcgi://172.17.0.2:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
