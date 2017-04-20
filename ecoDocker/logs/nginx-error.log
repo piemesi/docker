@@ -2993,3 +2993,273 @@ Stack trace:
 #0 /var/www/ecogate-tools/htdocs/index.php(44): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
 #1 {main}
   thrown in /var/www/ecogate-tools/htdocs/index.php on line 44" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:50:02 [error] 7#0: *200 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/terminal/"
+2017/04/20 14:50:03 [error] 7#0: *212 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:50:05 [error] 7#0: *214 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:50:05 [error] 7#0: *213 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:50:18 [error] 7#0: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:50:18 [error] 7#0: *215 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:17 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:17 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:18 [error] 7#0: *250 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:18 [error] 7#0: *250 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:18 [error] 7#0: *254 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:18 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:27 [error] 7#0: *255 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:27 [error] 7#0: *255 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:45 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:45 [error] 7#0: *254 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:46 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:46 [error] 7#0: *254 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:50 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:50 [error] 7#0: *250 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:50 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:50 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:52:55 [error] 7#0: *248 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:52:55 [error] 7#0: *248 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:53:02 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:53:02 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:53:11 [error] 7#0: *250 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:53:11 [error] 7#0: *250 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:53:13 [error] 7#0: *254 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:53:13 [error] 7#0: *244 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] No such file or directory in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:53:51 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:53:51 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:54:10 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:54:10 [error] 7#0: *379 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:54:10 [error] 7#0: *251 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:54:11 [error] 7#0: *255 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 14:54:11 [error] 7#0: *381 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 14:54:11 [error] 7#0: *381 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:15:09 [error] 7#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:15:09 [error] 7#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:15:10 [error] 7#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:15:11 [error] 7#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:15:19 [error] 7#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:15:19 [error] 7#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:15:29 [error] 7#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:15:29 [error] 7#0: *11 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:15:30 [error] 7#0: *13 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:15:30 [error] 7#0: *8 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'root', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:20:57 [error] 7#0: *102 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.17.0.5' is not allowed to connect to this MySQL server in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:20:57 [error] 7#0: *102 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.17.0.5' is not allowed to connect to this MySQL server in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"
+2017/04/20 15:21:09 [error] 7#0: *102 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET / HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888"
+2017/04/20 15:21:09 [error] 7#0: *101 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/ecogate-tools/htdocs/index.php:27
+Stack trace:
+#0 /var/www/ecogate-tools/htdocs/index.php(27): PDO->__construct('mysql:dbname=Pr...', 'writer', '123456', Array)
+#1 {main}
+  thrown in /var/www/ecogate-tools/htdocs/index.php on line 27" while reading response header from upstream, client: 172.17.0.1, server: 192.168.99.100, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://172.17.0.5:9000", host: "localhost:8888", referrer: "http://localhost:8888/"

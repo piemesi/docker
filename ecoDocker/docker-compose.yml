@@ -40,7 +40,6 @@
      - "lbash.sh"
   nginx_tools:
     image:  malgrat/nginx_base:tutumubuntu_phalcon  
-#    build: ./nginx_tools 
     container_name: nginx_tools
     ports:
      - "8888:80"
@@ -70,7 +69,7 @@
         - /var/www/ecogate-tools:/var/www/ecogate-tools
         - /var/www/ecogate-proto:/var/www/ecogate-proto
   mysql:
-   image: percona/percona-server:latest
+   image: malgrat/mysql_percona:privileged_user_writer #percona/percona-server:latest - the same with writes for writer
 #   build: ./mysql/init_data 
    container_name: mysql
    environment:
