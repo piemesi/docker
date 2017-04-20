@@ -1,5 +1,13 @@
-
-
+  pinba:
+    image: tony2001/pinba
+    container_name: pinba
+    restart: always
+    ports:
+        - "8080:8080"
+    links:
+        - mysql:mysql
+    entrypoint:
+     - "bash"
   nginx:
     image:  malgrat/nginx_proto:kafka #malgrat/nginx_base:tutumubuntu_phalcon 
 #    build: ./nginx_gate
@@ -8,13 +16,13 @@
      - "8889:80"
      - "12180-12183:2180-2183"
      - "19090-19094:9090-9094"
-#     - "43000-45500:43000-45500"
 #    working_dir: /etc
     links:
      - phpfpm
      - rabbitmq:rabbitmq
      - mysql:mysql
      - memcached:memcached
+     - pinba
     extra_hosts:
      - "gate.docker:localhost"
     volumes:
@@ -28,20 +36,14 @@
      - ./nginx_gate/nginx-access.log:/var/log/nginx/access.log
      - ./nginx_gate/lbash.sh:/lbash.sh
     entrypoint:
-#     - 'pwd'
      - "/bin/bash"
      - "lbash.sh"
-#      - "/usr/sbin/nginx"
-#     - 'cd /opt/kafka-cluster'
-#    - ./start_local.sh
   nginx_tools:
-    image:  malgrat/nginx_base:tutumubuntu_phalcon # malgrat/nginx_base #tutumubuntu_proto #malgrat/nginx_tools #malgrat/nginx_base #:tutumubuntu_proto 
+    image:  malgrat/nginx_base:tutumubuntu_phalcon  
 #    build: ./nginx_tools 
     container_name: nginx_tools
     ports:
      - "8888:80"
-#     - "12180-12183:2180-2183"
-#     - "19090-19094:9090-9094"
     links:
      - phpfpm
      - rabbitmq:rabbitmq
@@ -58,12 +60,10 @@
      - ./logs/nginx-error.log:/var/log/nginx/error.log
      - ./logs/nginx-access.log:/var/log/nginx/access.log
   phpfpm:
-    image: malgrat/phpfpm:rdkafka_composer # malgrat/phpfpm:rdkafka   # majksner/php-fpm # php:fpm
+    image: malgrat/phpfpm:rdkafka_composer_pinba_pdo
     container_name: phpfpm
     extra_hosts:
-#     - "tools.docker:172.17.0.1"
      - "localhost:172.17.0.1"
-#     - "gate.docker:172.17.0.1" 
     ports:
         - "9000:9000"
     volumes:
@@ -71,16 +71,25 @@
         - /var/www/ecogate-proto:/var/www/ecogate-proto
   mysql:
    image: percona/percona-server:latest
-   container_name: mysql_percona
+#   build: ./mysql/init_data 
+   container_name: mysql
    environment:
      MYSQL_ROOT_PASSWORD: 123456
+     MYSQL_USER: writer
+     MYSQL_PASSWORD: 123456
+     MYSQL_DATABASE: Processing
+   extra_hosts:
+     - "dbhost:172.17.0.5"
    ports:
     - "3307:3306"
+#    - "172.17.0.1:3307:3306"
    volumes:
+    - ./mysql/init_data:/docker-entrypoint-initdb.d
     # create volumes for use
     - /var/lib/mysql
     # bind mount my local my.cnf
-    # - $PWD/my.cnf:/etc/my.cnf
+    - ./mysql/my.cnf:/etc/mysql/my.cnf
+#    - /var/run/mysqld/mysqld.sock
    command:
     # Workaround for no my.cnf in image
     #  - '--user=mysql'
@@ -97,6 +106,9 @@
     PMA_USER: root
     PMA_PASSWORD: 123456
     PMA_ARBITRARY: 1
+   volumes:
+#    - /var/run/mysqld/mysqld.sock
+    - ./mysql/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
   rabbitmq:
    image: rabbitmq:3.6.1-management
    container_name: rabbitmq
@@ -108,8 +120,3 @@
    container_name: memcached
    ports:
     - "11212:11211"
-#kafka: 
-#  image: malgrat/kafka-cluster
-#  container_name: kafka
-#  links:
-#    - nginx
