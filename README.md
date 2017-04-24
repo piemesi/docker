@@ -9,6 +9,6 @@ Links:
 * docker-compose up -d
 
 
-![ screencast](https://dl.dropboxusercontent.com/1/view/p2nbb66go1z7mxn/Apps/Shutter/%C3%90%C2%92%C3%91%C2%8B%C3%90%C2%B4%C3%90%C2%B5%C3%90%C2%BB%C3%90%C2%B5%C3%90%C2%BD%C3%90%C2%B8%C3%90%C2%B5_027.png)
+![ screencast](https://www.dropbox.com/s/mylor98puazflhk/%D0%92%D1%8B%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_027.png?dl=0)
 
 *** docker setup будет дорабатываться - для полного запуска проекта одной командой. Нужно "добить mysql прежде всего" @toDo ***
